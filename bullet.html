@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Enfield Bullet</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#111;
+    color:#fff;
+}
+
+/* Header */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+    background:rgba(0,0,0,.9);
+    z-index:1000;
+}
+
+.logo{
+    color:#ff2d2d;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.4s;
+}
+
+nav ul li a:hover{
+    color:red;
+}
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1600&q=80") center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    background:rgba(0,0,0,.6);
+    padding:40px;
+    border-radius:15px;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:20px;
+}
+
+.hero button{
+    padding:14px 35px;
+    background:red;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.hero button:hover{
+    background:silver;
+    color:black;
+    transform:scale(1.08);
+}
+
+/* Common */
+
+section{
+    padding:90px 8%;
+}
+
+h2{
+    text-align:center;
+    color:red;
+    margin-bottom:40px;
+}
+
+/* Features */
+
+.feature-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#222;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px red;
+}
+
+.card i{
+    font-size:40px;
+    color:red;
+    margin-bottom:15px;
+}
+
+/* Models */
+
+.model-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.model-card{
+background:#222;
+border-radius:10px;
+overflow:hidden;
+transition:.4s;
+}
+
+.model-card:hover{
+transform:scale(1.03);
+}
+
+.model-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.model-card h3,
+.model-card p{
+padding:12px;
+}
+
+/* Gallery */
+
+.gallery-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery-box img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+transition:.4s;
+}
+
+.gallery-box img:hover{
+transform:scale(1.05);
+}
+
+/* Reviews */
+
+.review-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.review{
+background:#222;
+padding:25px;
+border-radius:10px;
+transition:.4s;
+}
+
+.review:hover{
+box-shadow:0 0 20px red;
+}
+
+/* Contact */
+
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+}
+
+input,
+textarea{
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+
+textarea{
+height:130px;
+}
+
+form button{
+padding:15px;
+background:red;
+color:white;
+border:none;
+cursor:pointer;
+transition:.4s;
+}
+
+form button:hover{
+background:silver;
+color:black;
+}
+
+/* Footer */
+
+footer{
+background:black;
+padding:30px;
+text-align:center;
+}
+
+.social i{
+font-size:28px;
+margin:10px;
+color:red;
+transition:.3s;
+cursor:pointer;
+}
+
+.social i:hover{
+transform:scale(1.2);
+color:white;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:10px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Royal Enfield</div>
+
+<nav>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#models">Models</a></li>
+
+<li><a href="#features">Features</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Ride The Legend</h1>
+
+<p>Feel the Power. Feel the Royal Enfield.</p>
+
+<button id="bookBtn">Book Now</button>
+
+</div>
+
+</section>
+
+<section id="features">
+
+<h2>Features</h2>
+
+<div class="feature-box">
+
+<div class="card">
+
+<i class="fas fa-motorcycle"></i>
+
+<h3>349cc Engine</h3>
+
+<p>Powerful J-Series Engine.</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-gas-pump"></i>
+
+<h3>Mileage</h3>
+
+<p>35-40 KM/L</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-tachometer-alt"></i>
+
+<h3>Top Speed</h3>
+
+<p>120 KM/H</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-couch"></i>
+
+<h3>Comfort</h3>
+
+<p>Premium Long Ride Comfort.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="models">
+
+<h2>Popular Models</h2>
+
+<div class="model-container">
+
+<div class="model-card">
+
+<img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80">
+
+<h3>Bullet 350</h3>
+
+<p>Classic Styling | 349cc Engine</p>
+
+</div>
+
+<div class="model-card">
+
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80">
+
+<h3>Classic 350</h3>
+
+<p>Retro Design | Comfortable Ride</p>
+
+</div>
+
+<div class="model-card">
+
+<img src="https://images.unsplash.com/photo-1558980394-df30ba1d0b8e?auto=format&fit=crop&w=800&q=80">
+
+<h3>Hunter 350</h3>
+
+<p>Modern Street Roadster</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2>Gallery</h2>
+
+<div class="gallery-box">
+
+<img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1558980394-df30ba1d0b8e?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80">
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Customer Reviews</h2>
+
+<div class="review-box">
+
+<div class="review">
+
+<p>"Best bike for long rides."</p>
+
+<h4>- Rahul</h4>
+
+</div>
+
+<div class="review">
+
+<p>"Amazing performance and premium feel."</p>
+
+<h4>- Aman</h4>
+
+</div>
+
+<div class="review">
+
+<p>"Royal Enfield is an emotion."</p>
+
+<h4>- Vikas</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<form id="contactForm">
+
+<input type="text" placeholder="Name" required>
+
+<input type="email" placeholder="Email" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<textarea placeholder="Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<div class="social">
+
+<i class="fab fa-facebook"></i>
+
+<i class="fab fa-instagram"></i>
+
+<i class="fab fa-youtube"></i>
+
+<i class="fab fa-twitter"></i>
+
+</div>
+
+<p>© 2026 Royal Enfield Bullet Website | All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+// Book Button
+
+document.getElementById("bookBtn").onclick=function(){
+
+alert("Thank You! Your Booking Request Has Been Submitted.");
+
+}
+
+// Contact Form
+
+document.getElementById("contactForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Message Sent Successfully!");
+
+this.reset();
+
+});
+
+</script>
+
+</body>
+</html>
